@@ -16,9 +16,9 @@
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
 
 			<!-- cupid-development kernel -->
-  <project name="cupid-development/android_kernel_xiaomi_sm8450" path="common" remote="github" revision="lineage-21" />
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="sm8450-devicetrees" remote="github" revision="lineage-21" />
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-modules" path="sm8450-modules" remote="github" revision="lineage-21" />
+  <project name="cupid-development/android_kernel_xiaomi_sm8450" path="common" remote="github" revision="lineage-22" />
+  <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="sm8450-devicetrees" remote="github" revision="lineage-22" />
+  <project name="cupid-development/android_kernel_xiaomi_sm8450-modules" path="sm8450-modules" remote="github" revision="lineage-22" />
   
   			<!-- build scripts -->
   <project name="carlyle-felix/cupid-kernel-build" path="cupid-kernel-build" remote="github" revision="main" >
