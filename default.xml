@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
-  <remote fetch="https://github.com" name="github" />
-  <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
+  <remote name="aosp" fetch="https://android-review.googlesource.com/" />
+  <remote name="github" fetch="https://github.com" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android12-5.10-2024-08" />
 
-  <project path="build" name="kernel/build" />
-  <project path="kernel/tests" name="kernel/tests" />
-  <project path="kernel/configs" name="kernel/configs" />
-  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" />
-  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
-  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
+  <project name="kernel/build" path="build" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="kernel/tests" path="kernel/tests" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="kernel/configs" path="kernel/configs" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts-master/clang/host/linux-x86" clone-depth="1" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="platform/prebuilts/build-tools" path="prebuilts/build-tools" clone-depth="1" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" clone-depth="1" revision="master-kernel-build-2021" remote="aosp" />
+  <project name="platform/system/tools/mkbootimg" path="tools/mkbootimg" revision="master-kernel-build-2021" remote="aosp" />
 
 			<!-- cupid-development kernel -->
-  <project name="cupid-development/android_kernel_xiaomi_sm8450" path="common" remote="github" revision="lineage-22" />
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="sm8450-devicetrees" remote="github" revision="lineage-22" />
-  <project name="cupid-development/android_kernel_xiaomi_sm8450-modules" path="sm8450-modules" remote="github" revision="lineage-22" />
+  <project name="cupid-development/android_kernel_xiaomi_sm8450" path="common" remote="github" revision="lineage-22.0" />
+  <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="sm8450-devicetrees" remote="github" revision="lineage-22.0" />
+  <project name="cupid-development/android_kernel_xiaomi_sm8450-modules" path="sm8450-modules" remote="github" revision="lineage-22.0" />
   
   			<!-- build scripts -->
   <project name="carlyle-felix/cupid-kernel-build" path="cupid-kernel-build" remote="github" revision="main" >
-  	<linkfile dest="sm8450/build.config.cupid" src="sm8450/build.config.cupid"/>
+  	<linkfile dest="common/build.config.cupid" src="sm8450/build.config.cupid"/>
   	<linkfile dest="zip.sh" src="zip.sh"/>
   	<linkfile dest="build_cupid.sh" src="build_cupid.sh"/>
   	<linkfile dest="AnyKernel3/anykernel.sh" src="anykernel.sh"/>
