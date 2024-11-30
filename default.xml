@@ -21,7 +21,7 @@
   
   			<!-- build scripts -->
   <project name="carlyle-felix/cupid-kernel-build" path="cupid-kernel-build" remote="github" revision="main" >
-  	<linkfile dest="common/build.config.cupid" src="sm8450/build.config.cupid"/>
+  	<linkfile dest="common/build.config.cupid" src="common/build.config.cupid"/>
   	<linkfile dest="zip.sh" src="zip.sh"/>
   	<linkfile dest="build_cupid.sh" src="build_cupid.sh"/>
   	<linkfile dest="AnyKernel3/anykernel.sh" src="anykernel.sh"/>
